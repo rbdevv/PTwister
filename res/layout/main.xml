@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/widget46" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+	<LinearLayout android:id="@+id/bigdaddy"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:orientation="vertical">
+		<TableLayout android:id="@+id/widget38"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:orientation="vertical">
+			<TextView android:id="@+id/TimeLabel" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:text="Time that you hit &apos;Continue&apos;:"
+				android:textSize="18sp" android:gravity="center_horizontal">
+			</TextView>
+		</TableLayout>
+		<TableRow android:id="@+id/widget39" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:orientation="horizontal">
+			<EditText android:id="@+id/MonthBox" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:textSize="18sp"
+				android:hint="month" android:layout_weight="1" android:inputType="number">
+			</EditText>
+			<EditText android:id="@+id/DayBox" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:textSize="18sp"
+				android:layout_weight="1" android:hint="day" android:inputType="number">
+			</EditText>
+		</TableRow>
+		<TableRow android:id="@+id/widget42" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:orientation="horizontal">
+			<EditText android:id="@+id/HourBox" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:textSize="18sp"
+				android:layout_weight="1" android:hint="hour" android:inputType="number">
+			</EditText>
+			<EditText android:id="@+id/MinuteBox" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:textSize="18sp"
+				android:layout_weight="1" android:hint="minute" android:inputType="number">
+			</EditText>
+		</TableRow>
+		<Button android:id="@+id/AutoFillTime" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="Set to Current Phone Time">
+		</Button>
+		<TextView android:id="@+id/PokemonInfoLabel"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:text="Captured Pokemon Info:" android:textSize="18sp"
+			android:gravity="center_horizontal">
+		</TextView>
+		<EditText android:id="@+id/PokedexNoBox"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:textSize="18sp" android:hint="Pokedex #" android:inputType="number">
+		</EditText>
+		<TableRow android:id="@+id/widget47" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:orientation="horizontal"
+			android:gravity="center" android:layout_gravity="center_horizontal">
+			<Spinner android:id="@+id/NaturePicker" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:layout_weight="1"
+				android:hint="Nature" android:text="Nature">
+			</Spinner>
+			<Spinner android:id="@+id/CharacteristicPicker"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_weight="1" android:hint="Characteristic">
+			</Spinner>
+		</TableRow>
+		
+			<TableRow android:id="@+id/widget49" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="horizontal">
+				<EditText android:id="@+id/HPBox" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:textSize="18sp"
+				android:layout_weight="1" android:hint="HP" android:inputType="number">
+				</EditText>
+				<EditText android:id="@+id/SpeedBox" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:textSize="18sp"
+				android:layout_weight="1" android:hint="Speed" android:inputType="number">
+				</EditText>
+			</TableRow>
+			<TableRow android:id="@+id/widget52" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="horizontal">
+				<EditText android:id="@+id/AttackBox" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:textSize="18sp"
+					android:layout_weight="1" android:inputType="number" android:hint="Attack">
+				</EditText>
+				<EditText android:id="@+id/SpecialAttackBox"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:textSize="18sp" android:layout_weight="1"
+					android:inputType="number" android:hint="Sp. Attack">
+				</EditText>
+			</TableRow>
+			<TableRow android:id="@+id/widget55" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="horizontal">
+				<EditText android:id="@+id/DefenseBox"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:textSize="18sp" android:layout_weight="1"
+					android:inputType="number" android:hint="Defense" >
+				</EditText>
+				<EditText android:id="@+id/SpecialDefenseBox"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:textSize="18sp" android:layout_weight="1"
+					android:inputType="number" android:hint="Sp. Defense">
+				</EditText>
+
+
+
+			</TableRow>
+
+
+		<TextView android:id="@+id/TrainerView" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="Trainer Info:"
+			android:textSize="18sp" android:gravity="center_horizontal">></TextView>
+		
+			<TableRow android:id="@+id/widget61" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="horizontal">
+				<EditText android:id="@+id/TrainerIDBox"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:textSize="18sp" android:layout_weight="1"
+					android:inputType="number" android:hint="Trainer ID">
+				</EditText>
+				<EditText android:id="@+id/SecretIDBox"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:textSize="18sp" android:layout_weight="1"
+					android:inputType="number" android:hint="Secret ID">
+				</EditText>
+			</TableRow>
+
+				<Button android:id="@+id/Calculate" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:textSize="30sp" android:text="Calculate!">
+		</Button>
+	</LinearLayout>
+</ScrollView>
