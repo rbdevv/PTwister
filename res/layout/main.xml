@@ -42,10 +42,18 @@
 			android:text="Captured Pokemon Info:" android:textSize="18sp"
 			android:gravity="center_horizontal">
 		</TextView>
+		<TableRow android:id="@+id/widget46" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:orientation="horizontal"
+			android:gravity="center" android:layout_gravity="center_horizontal">
 		<EditText android:id="@+id/PokedexNoBox"
 			android:layout_width="fill_parent" android:layout_height="wrap_content"
-			android:textSize="18sp" android:hint="Pokedex #" android:inputType="number">
+			android:textSize="18sp" android:hint="Pokedex #" android:inputType="number" android:layout_weight="1">
 		</EditText>
+		<EditText android:id="@+id/LevelBox"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:textSize="18sp" android:hint="Level" android:inputType="number" android:layout_weight="1">
+		</EditText>
+		</TableRow>
 		<TableRow android:id="@+id/widget47" android:layout_width="fill_parent"
 			android:layout_height="wrap_content" android:orientation="horizontal"
 			android:gravity="center" android:layout_gravity="center_horizontal">
