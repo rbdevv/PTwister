@@ -3,6 +3,7 @@ package com.rbdevv.calc.ptwister;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.text.format.Time;
 import android.util.Log;
@@ -164,52 +165,58 @@ public class twister extends Activity{
 			}
 		};
 		
+		Log.i("Ptwister", "IVs_Calculated_Successfully" + HPIV.toString());
+		new AlertDialog.Builder(this)
+			.setTitle("IVs")
+			.setMessage("HP IVs: " + HPIV + "\n" + "AT IVs: " + ATIV + "\n" + "DF IVs: " + DFIV + "\n" + "SA IVs: " + SAIV + "\n" + "SD IVs: " + SDIV + "\n" + "SP IVs: " + SPIV)
+			.show();
+		
 		
 
 //		Toast DebugToast = Toast.makeText(this, ATIV.toString(),15000);
 //		DebugToast.show();
-		LinearLayout IVDisp = new LinearLayout(this);
-		
-		TextView HPIVtext = new TextView(this);
-		TableLayout IVTable = new TableLayout(this);
-		HPIVtext.setText("HP IVs: " + HPIV);
-		TableRow HPRow = new TableRow(this);
-		HPRow.addView(HPIVtext);
-		TextView ATIVtext = new TextView(this);
-		ATIVtext.setText("AT IVs: " + ATIV);
-		TableRow ATRow = new TableRow(this);
-		ATRow.addView(ATIVtext);
-		TextView DFIVtext = new TextView(this);
-		DFIVtext.setText("DF IVs: " + DFIV);
-		TableRow DFRow = new TableRow(this);
-		DFRow.addView(DFIVtext);
-		TextView SAIVtext = new TextView(this);
-		SAIVtext.setText("SA IVs: " + SAIV);
-		TableRow SARow = new TableRow(this);	
-		SARow.addView(SAIVtext);		
-		TextView SDIVtext = new TextView(this);
-		SDIVtext.setText("SD IVs: " + SDIV);
-		TableRow SDRow = new TableRow(this);		
-		SDRow.addView(SDIVtext);		
-		TextView SPIVtext = new TextView(this);
-		SPIVtext.setText("SP IVs: " + SPIV);
-		TableRow SPRow = new TableRow(this);	
-		SPRow.addView(SPIVtext);
-		
-		//IVWindow.INPUT_METHOD_NOT_NEEDED=1;
-		
-		
-		IVTable.addView(HPRow);
-		IVTable.addView(ATRow);
-		IVTable.addView(DFRow);
-		IVTable.addView(SARow);
-		IVTable.addView(SDRow);
-		IVTable.addView(SPRow);
-		
-		IVDisp.addView(IVTable);
-		//widget46;
-		PopupWindow IVWindow = new PopupWindow(IVDisp);
-		IVWindow.showAtLocation(findViewById(R.id.bigdaddy), Gravity.CENTER, 0, 0);
+//		LinearLayout IVDisp = new LinearLayout(this);
+//		
+//		TextView HPIVtext = new TextView(this);
+//		TableLayout IVTable = new TableLayout(this);
+//		HPIVtext.setText("HP IVs: " + HPIV);
+//		TableRow HPRow = new TableRow(this);
+//		HPRow.addView(HPIVtext);
+//		TextView ATIVtext = new TextView(this);
+//		ATIVtext.setText("AT IVs: " + ATIV);
+//		TableRow ATRow = new TableRow(this);
+//		ATRow.addView(ATIVtext);
+//		TextView DFIVtext = new TextView(this);
+//		DFIVtext.setText("DF IVs: " + DFIV);
+//		TableRow DFRow = new TableRow(this);
+//		DFRow.addView(DFIVtext);
+//		TextView SAIVtext = new TextView(this);
+//		SAIVtext.setText("SA IVs: " + SAIV);
+//		TableRow SARow = new TableRow(this);	
+//		SARow.addView(SAIVtext);		
+//		TextView SDIVtext = new TextView(this);
+//		SDIVtext.setText("SD IVs: " + SDIV);
+//		TableRow SDRow = new TableRow(this);		
+//		SDRow.addView(SDIVtext);		
+//		TextView SPIVtext = new TextView(this);
+//		SPIVtext.setText("SP IVs: " + SPIV);
+//		TableRow SPRow = new TableRow(this);	
+//		SPRow.addView(SPIVtext);
+//		
+//		//IVWindow.INPUT_METHOD_NOT_NEEDED=1;
+//		
+//		
+//		IVTable.addView(HPRow);
+//		IVTable.addView(ATRow);
+//		IVTable.addView(DFRow);
+//		IVTable.addView(SARow);
+//		IVTable.addView(SDRow);
+//		IVTable.addView(SPRow);
+//		
+//		IVDisp.addView(IVTable);
+//		//widget46;
+//		PopupWindow IVWindow = new PopupWindow(IVDisp);
+//		IVWindow.showAtLocation(findViewById(R.id.bigdaddy), Gravity.CENTER, 0, 0);
 		//IVWindow.setWindowLayoutMode(200, 200);
 		//IVWindow.isShowing() = true;
 		
