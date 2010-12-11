@@ -6,13 +6,17 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.text.format.Time;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.Spinner;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.view.ViewGroup;
@@ -112,6 +116,12 @@ public class twister extends Activity{
 		EditText SPBox = (EditText) findViewById(R.id.SpeedBox);
 		
 		
+		if (LevelBox.toString() == "999") {
+			Toast JustinToast = Toast.makeText(this, "Justin Loves Poops",10000);
+			JustinToast.show();
+	};
+	
+	
 		ArrayList<Integer> HPIV = new ArrayList<Integer>();
 		ArrayList<Integer> ATIV = new ArrayList<Integer>();
 		ArrayList<Integer> DFIV = new ArrayList<Integer>();
@@ -153,14 +163,55 @@ public class twister extends Activity{
 				SPIV.add(iv);
 			}
 		};
+		
+		
+
 //		Toast DebugToast = Toast.makeText(this, ATIV.toString(),15000);
 //		DebugToast.show();
-		PopupWindow IVWindow = new PopupWindow();
+		LinearLayout IVDisp = new LinearLayout(this);
+		
+		TextView HPIVtext = new TextView(this);
+		TableLayout IVTable = new TableLayout(this);
+		HPIVtext.setText("HP IVs: " + HPIV);
+		TableRow HPRow = new TableRow(this);
+		HPRow.addView(HPIVtext);
+		TextView ATIVtext = new TextView(this);
+		ATIVtext.setText("AT IVs: " + ATIV);
+		TableRow ATRow = new TableRow(this);
+		ATRow.addView(ATIVtext);
+		TextView DFIVtext = new TextView(this);
+		DFIVtext.setText("DF IVs: " + DFIV);
+		TableRow DFRow = new TableRow(this);
+		DFRow.addView(DFIVtext);
+		TextView SAIVtext = new TextView(this);
+		SAIVtext.setText("SA IVs: " + SAIV);
+		TableRow SARow = new TableRow(this);	
+		SARow.addView(SAIVtext);		
+		TextView SDIVtext = new TextView(this);
+		SDIVtext.setText("SD IVs: " + SDIV);
+		TableRow SDRow = new TableRow(this);		
+		SDRow.addView(SDIVtext);		
+		TextView SPIVtext = new TextView(this);
+		SPIVtext.setText("SP IVs: " + SPIV);
+		TableRow SPRow = new TableRow(this);	
+		SPRow.addView(SPIVtext);
+		
 		//IVWindow.INPUT_METHOD_NOT_NEEDED=1;
-		IVWindow.setWindowLayoutMode(200, 200);
-		TextView IVDisp = new android.widget.TextView(this);
 		
 		
+		IVTable.addView(HPRow);
+		IVTable.addView(ATRow);
+		IVTable.addView(DFRow);
+		IVTable.addView(SARow);
+		IVTable.addView(SDRow);
+		IVTable.addView(SPRow);
+		
+		IVDisp.addView(IVTable);
+		//widget46;
+		PopupWindow IVWindow = new PopupWindow(IVDisp);
+		IVWindow.showAtLocation(findViewById(R.id.bigdaddy), Gravity.CENTER, 0, 0);
+		//IVWindow.setWindowLayoutMode(200, 200);
+		//IVWindow.isShowing() = true;
 		
 		
 		
