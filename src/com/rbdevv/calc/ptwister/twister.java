@@ -158,7 +158,7 @@ public class twister extends Activity{
 			}
 		};
 		
-		Log.i("Ptwister", "IVs_Calculated_Successfully" + HPIV.toString());
+		Log.i("Ptwister", "IVs_Calculated_Successfully");
 		new AlertDialog.Builder(this)
 			.setTitle("IVs")
 			.setMessage("HP IVs: " + HPIV + "\n" + "AT IVs: " + ATIV + "\n" + "DF IVs: " + DFIV + "\n" + "SA IVs: " + SAIV + "\n" + "SD IVs: " + SDIV + "\n" + "SP IVs: " + SPIV)
